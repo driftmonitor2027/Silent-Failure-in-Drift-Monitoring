@@ -1,0 +1,25 @@
+[project]
+name = "driftaudit"
+version = "0.1.0"
+description = "Conformance audit of distribution-shift detectors: can a caller tell a measurement from a non-measurement?"
+requires-python = ">=3.11"
+dependencies = [
+  "numpy>=1.26",
+  "scipy>=1.11",
+]
+
+[project.optional-dependencies]
+# Libraries under audit. Pinned in results/environment.txt at run time so the
+# reported matrix is attributable to exact versions.
+libraries = [
+  "evidently>=0.7",
+  "river>=0.21",
+]
+dev = ["pytest>=8.0"]
+
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[tool.setuptools.packages.find]
+include = ["driftaudit*"]

@@ -1,0 +1,13 @@
+alibi-detect==0.13.0
+evidently==0.7.21
+nannyml==0.13.1
+numpy==1.26.4
+pandas==2.3.3
+river==0.25.0
+scikit-learn==1.9.0
+scipy==1.17.1
+
+# Python 3.12.13 (conda env py312-driftaudit).
+# All five libraries auditable on this interpreter. The earlier 3.13 run could
+# not install nannyml or alibi-detect (no compatible release); deepchecks 0.19.1
+# remains excluded on both, as it calls a scikit-learn scorer removed upstream.

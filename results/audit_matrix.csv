@@ -1,0 +1,435 @@
+detector,probe,expectation,outcome,verdict,score,flagged,warned,caller_can_tell,detail
+textbook-psi/clipped,degenerate_reference,undefined,silent-stable,fail-silent,0.000000,False,False,False,
+textbook-psi/clipped,degenerate_current,shifted,silent-drift,pass,6.900848,True,False,False,
+textbook-psi/clipped,both_constant_equal,stable,silent-stable,pass,0.000000,False,False,False,
+textbook-psi/clipped,both_constant_different,shifted,silent-stable,fail-miss,0.000000,False,False,False,
+textbook-psi/clipped,disjoint_support,shifted,silent-drift,pass,6.900848,True,False,False,
+textbook-psi/clipped,empty_reference_bins,shifted,silent-drift,pass,6.828697,True,False,False,
+textbook-psi/clipped,tiny_current_n3,undefined,silent-drift,fail-noisy,5.673374,True,False,False,
+textbook-psi/clipped,tiny_both_n5,undefined,silent-drift,fail-noisy,6.077682,True,False,False,
+textbook-psi/clipped,empty_current,undefined,silent-drift,fail-noisy,6.900848,True,False,False,
+textbook-psi/clipped,all_nan_current,undefined,silent-drift,fail-noisy,6.900848,True,False,False,
+textbook-psi/clipped,partial_nan_current,undefined,silent-stable,fail-silent,0.025715,False,False,False,
+textbook-psi/clipped,inf_in_current,undefined,silent-stable,fail-silent,0.037261,False,False,False,
+textbook-psi/clipped,control_no_shift,stable,silent-stable,pass,0.055389,False,False,False,
+textbook-psi/clipped,control_large_shift,shifted,silent-drift,pass,4.840604,True,False,False,
+field-psi/zero-guard,degenerate_reference,undefined,silent-stable,fail-silent,0.000000,False,False,False,
+field-psi/zero-guard,degenerate_current,shifted,silent-drift,pass,6.900848,True,False,False,
+field-psi/zero-guard,both_constant_equal,stable,silent-stable,pass,0.000000,False,False,False,
+field-psi/zero-guard,both_constant_different,shifted,silent-stable,fail-miss,0.000000,False,False,False,
+field-psi/zero-guard,disjoint_support,shifted,silent-drift,pass,6.900848,True,False,False,
+field-psi/zero-guard,empty_reference_bins,shifted,silent-drift,pass,6.828697,True,False,False,
+field-psi/zero-guard,tiny_current_n3,undefined,silent-stable,fail-silent,0.000000,False,False,False,
+field-psi/zero-guard,tiny_both_n5,undefined,silent-drift,fail-noisy,6.077682,True,False,False,
+field-psi/zero-guard,empty_current,undefined,silent-stable,fail-silent,0.000000,False,False,False,
+field-psi/zero-guard,all_nan_current,undefined,silent-drift,fail-noisy,6.900848,True,False,False,
+field-psi/zero-guard,partial_nan_current,undefined,silent-stable,fail-silent,0.025715,False,False,False,
+field-psi/zero-guard,inf_in_current,undefined,silent-stable,fail-silent,0.037261,False,False,False,
+field-psi/zero-guard,control_no_shift,stable,silent-stable,pass,0.055389,False,False,False,
+field-psi/zero-guard,control_large_shift,shifted,silent-drift,pass,4.840604,True,False,False,
+textbook-psi/equal-width,degenerate_reference,undefined,silent-drift,fail-noisy,13.815512,True,False,False,
+textbook-psi/equal-width,degenerate_current,shifted,silent-drift,pass,11.971726,True,False,False,
+textbook-psi/equal-width,both_constant_equal,stable,silent-stable,pass,0.000000,False,False,False,
+textbook-psi/equal-width,both_constant_different,shifted,silent-drift,pass,13.815512,True,False,False,
+textbook-psi/equal-width,disjoint_support,shifted,silent-drift,pass,11.971726,True,False,False,
+textbook-psi/equal-width,empty_reference_bins,shifted,silent-drift,pass,25.617231,True,False,False,
+textbook-psi/equal-width,tiny_current_n3,undefined,silent-drift,fail-noisy,6.648214,True,False,False,
+textbook-psi/equal-width,tiny_both_n5,undefined,silent-drift,fail-noisy,12.344707,True,False,False,
+textbook-psi/equal-width,empty_current,undefined,silent-drift,fail-noisy,11.971726,True,False,False,
+textbook-psi/equal-width,all_nan_current,undefined,silent-drift,fail-noisy,11.971726,True,False,False,
+textbook-psi/equal-width,partial_nan_current,undefined,silent-stable,fail-silent,0.116494,False,False,False,
+textbook-psi/equal-width,inf_in_current,undefined,silent-stable,fail-silent,0.080454,False,False,False,
+textbook-psi/equal-width,control_no_shift,stable,silent-stable,pass,0.070065,False,False,False,
+textbook-psi/equal-width,control_large_shift,shifted,silent-drift,pass,5.805723,True,False,False,
+reference-psi/status,degenerate_reference,undefined,explicit-undefined,pass,,,False,True,status=degenerate-reference
+reference-psi/status,degenerate_current,shifted,silent-drift,pass,6.900848,True,False,False,
+reference-psi/status,both_constant_equal,stable,explicit-undefined,safe-undefined,,,False,True,status=degenerate-reference
+reference-psi/status,both_constant_different,shifted,explicit-undefined,safe-undefined,,,False,True,status=degenerate-reference
+reference-psi/status,disjoint_support,shifted,silent-drift,pass,6.900848,True,False,False,
+reference-psi/status,empty_reference_bins,shifted,silent-drift,pass,6.828697,True,False,False,
+reference-psi/status,tiny_current_n3,undefined,explicit-undefined,pass,,,False,True,status=insufficient-samples
+reference-psi/status,tiny_both_n5,undefined,explicit-undefined,pass,,,False,True,status=insufficient-samples
+reference-psi/status,empty_current,undefined,explicit-undefined,pass,,,False,True,status=insufficient-samples
+reference-psi/status,all_nan_current,undefined,explicit-undefined,pass,,,False,True,status=empty-after-dropping-non-finite
+reference-psi/status,partial_nan_current,undefined,explicit-undefined,pass,,,False,True,status=non-finite-input-dropped-250
+reference-psi/status,inf_in_current,undefined,explicit-undefined,pass,,,False,True,status=non-finite-input-dropped-5
+reference-psi/status,control_no_shift,stable,silent-stable,pass,0.055389,False,False,False,
+reference-psi/status,control_large_shift,shifted,silent-drift,pass,4.840604,True,False,False,
+scipy/ks_2samp,degenerate_reference,undefined,silent-drift,fail-noisy,0.000000,True,False,False,
+scipy/ks_2samp,degenerate_current,shifted,silent-drift,pass,0.000000,True,False,False,
+scipy/ks_2samp,both_constant_equal,stable,silent-stable,pass,1.000000,False,False,False,
+scipy/ks_2samp,both_constant_different,shifted,silent-drift,pass,0.000000,True,False,False,
+scipy/ks_2samp,disjoint_support,shifted,silent-drift,pass,0.000000,True,False,False,
+scipy/ks_2samp,empty_reference_bins,shifted,silent-drift,pass,0.000000,True,False,False,
+scipy/ks_2samp,tiny_current_n3,undefined,silent-stable,fail-silent,0.153041,False,False,False,
+scipy/ks_2samp,tiny_both_n5,undefined,silent-stable,fail-silent,0.873016,False,False,False,
+scipy/ks_2samp,empty_current,undefined,explicit-undefined,pass,nan,False,True,True,score is None/NaN
+scipy/ks_2samp,all_nan_current,undefined,explicit-undefined,pass,nan,False,False,True,score is None/NaN
+scipy/ks_2samp,partial_nan_current,undefined,explicit-undefined,pass,nan,False,False,True,score is None/NaN
+scipy/ks_2samp,inf_in_current,undefined,silent-stable,fail-silent,0.508917,False,False,False,
+scipy/ks_2samp,control_no_shift,stable,silent-stable,pass,0.291925,False,False,False,
+scipy/ks_2samp,control_large_shift,shifted,silent-drift,pass,0.000000,True,False,False,
+scipy/cramervonmises_2samp,degenerate_reference,undefined,silent-drift,fail-noisy,0.000000,True,False,False,
+scipy/cramervonmises_2samp,degenerate_current,shifted,silent-drift,pass,0.000000,True,False,False,
+scipy/cramervonmises_2samp,both_constant_equal,stable,silent-stable,pass,1.000000,False,False,False,
+scipy/cramervonmises_2samp,both_constant_different,shifted,silent-drift,pass,0.000000,True,False,False,
+scipy/cramervonmises_2samp,disjoint_support,shifted,silent-drift,pass,0.000000,True,False,False,
+scipy/cramervonmises_2samp,empty_reference_bins,shifted,silent-drift,pass,0.000000,True,False,False,
+scipy/cramervonmises_2samp,tiny_current_n3,undefined,silent-stable,fail-silent,0.107640,False,False,False,
+scipy/cramervonmises_2samp,tiny_both_n5,undefined,silent-stable,fail-silent,0.428571,False,False,False,
+scipy/cramervonmises_2samp,empty_current,undefined,explicit-undefined,pass,nan,False,True,True,score is None/NaN
+scipy/cramervonmises_2samp,all_nan_current,undefined,explicit-undefined,pass,nan,False,False,True,score is None/NaN
+scipy/cramervonmises_2samp,partial_nan_current,undefined,explicit-undefined,pass,nan,False,False,True,score is None/NaN
+scipy/cramervonmises_2samp,inf_in_current,undefined,silent-stable,fail-silent,0.472436,False,False,False,
+scipy/cramervonmises_2samp,control_no_shift,stable,silent-stable,pass,0.082352,False,False,False,
+scipy/cramervonmises_2samp,control_large_shift,shifted,silent-drift,pass,0.000000,True,False,False,
+scipy/epps_singleton_2samp,degenerate_reference,undefined,silent-drift,fail-noisy,0.000000,True,False,False,
+scipy/epps_singleton_2samp,degenerate_current,shifted,silent-drift,pass,0.000000,True,False,False,
+scipy/epps_singleton_2samp,both_constant_equal,stable,raised,error,,,True,True,LinAlgError: SVD did not converge
+scipy/epps_singleton_2samp,both_constant_different,shifted,silent-drift,pass,0.000000,True,True,False,1 warning(s)
+scipy/epps_singleton_2samp,disjoint_support,shifted,silent-drift,pass,0.000000,True,False,False,
+scipy/epps_singleton_2samp,empty_reference_bins,shifted,silent-drift,pass,0.000000,True,False,False,
+scipy/epps_singleton_2samp,tiny_current_n3,undefined,explicit-undefined,pass,nan,False,True,True,score is None/NaN
+scipy/epps_singleton_2samp,tiny_both_n5,undefined,silent-stable,fail-silent,0.463212,False,False,False,
+scipy/epps_singleton_2samp,empty_current,undefined,explicit-undefined,pass,nan,False,True,True,score is None/NaN
+scipy/epps_singleton_2samp,all_nan_current,undefined,explicit-undefined,pass,nan,False,False,True,score is None/NaN
+scipy/epps_singleton_2samp,partial_nan_current,undefined,explicit-undefined,pass,nan,False,False,True,score is None/NaN
+scipy/epps_singleton_2samp,inf_in_current,undefined,explicit-undefined,pass,nan,False,False,True,score is None/NaN
+scipy/epps_singleton_2samp,control_no_shift,stable,silent-stable,pass,0.296667,False,False,False,
+scipy/epps_singleton_2samp,control_large_shift,shifted,silent-drift,pass,0.000000,True,False,False,
+scipy/mannwhitneyu,degenerate_reference,undefined,silent-drift,fail-noisy,0.000000,True,False,False,
+scipy/mannwhitneyu,degenerate_current,shifted,silent-drift,pass,0.000000,True,False,False,
+scipy/mannwhitneyu,both_constant_equal,stable,silent-stable,pass,1.000000,False,False,False,
+scipy/mannwhitneyu,both_constant_different,shifted,silent-drift,pass,0.000000,True,False,False,
+scipy/mannwhitneyu,disjoint_support,shifted,silent-drift,pass,0.000000,True,False,False,
+scipy/mannwhitneyu,empty_reference_bins,shifted,silent-stable,fail-miss,1.000000,False,False,False,
+scipy/mannwhitneyu,tiny_current_n3,undefined,silent-stable,fail-silent,0.105861,False,False,False,
+scipy/mannwhitneyu,tiny_both_n5,undefined,silent-stable,fail-silent,0.420635,False,False,False,
+scipy/mannwhitneyu,empty_current,undefined,explicit-undefined,pass,nan,False,True,True,score is None/NaN
+scipy/mannwhitneyu,all_nan_current,undefined,explicit-undefined,pass,nan,False,False,True,score is None/NaN
+scipy/mannwhitneyu,partial_nan_current,undefined,explicit-undefined,pass,nan,False,False,True,score is None/NaN
+scipy/mannwhitneyu,inf_in_current,undefined,silent-stable,fail-silent,0.654367,False,False,False,
+scipy/mannwhitneyu,control_no_shift,stable,silent-stable,pass,0.051607,False,False,False,
+scipy/mannwhitneyu,control_large_shift,shifted,silent-drift,pass,0.000000,True,False,False,
+scipy/ttest_ind,degenerate_reference,undefined,silent-drift,fail-noisy,0.000000,True,False,False,
+scipy/ttest_ind,degenerate_current,shifted,silent-drift,pass,0.000000,True,False,False,
+scipy/ttest_ind,both_constant_equal,stable,explicit-undefined,safe-undefined,nan,False,True,True,score is None/NaN
+scipy/ttest_ind,both_constant_different,shifted,silent-drift,pass,0.000000,True,True,False,2 warning(s)
+scipy/ttest_ind,disjoint_support,shifted,silent-drift,pass,0.000000,True,False,False,
+scipy/ttest_ind,empty_reference_bins,shifted,silent-stable,fail-miss,0.830641,False,False,False,
+scipy/ttest_ind,tiny_current_n3,undefined,silent-stable,fail-silent,0.155278,False,False,False,
+scipy/ttest_ind,tiny_both_n5,undefined,silent-stable,fail-silent,0.531736,False,False,False,
+scipy/ttest_ind,empty_current,undefined,explicit-undefined,pass,nan,False,True,True,score is None/NaN
+scipy/ttest_ind,all_nan_current,undefined,explicit-undefined,pass,nan,False,False,True,score is None/NaN
+scipy/ttest_ind,partial_nan_current,undefined,explicit-undefined,pass,nan,False,False,True,score is None/NaN
+scipy/ttest_ind,inf_in_current,undefined,explicit-undefined,pass,nan,False,False,True,score is None/NaN
+scipy/ttest_ind,control_no_shift,stable,silent-drift,fail-alarm,0.038223,True,False,False,
+scipy/ttest_ind,control_large_shift,shifted,silent-drift,pass,0.000000,True,False,False,
+scipy/ranksums,degenerate_reference,undefined,silent-drift,fail-noisy,0.000000,True,False,False,
+scipy/ranksums,degenerate_current,shifted,silent-drift,pass,0.000000,True,False,False,
+scipy/ranksums,both_constant_equal,stable,silent-stable,pass,1.000000,False,False,False,
+scipy/ranksums,both_constant_different,shifted,silent-drift,pass,0.000000,True,False,False,
+scipy/ranksums,disjoint_support,shifted,silent-drift,pass,0.000000,True,False,False,
+scipy/ranksums,empty_reference_bins,shifted,silent-stable,fail-miss,1.000000,False,False,False,
+scipy/ranksums,tiny_current_n3,undefined,silent-stable,fail-silent,0.101534,False,False,False,
+scipy/ranksums,tiny_both_n5,undefined,silent-stable,fail-silent,0.347208,False,False,False,
+scipy/ranksums,empty_current,undefined,explicit-undefined,pass,nan,False,True,True,score is None/NaN
+scipy/ranksums,all_nan_current,undefined,explicit-undefined,pass,nan,False,False,True,score is None/NaN
+scipy/ranksums,partial_nan_current,undefined,explicit-undefined,pass,nan,False,False,True,score is None/NaN
+scipy/ranksums,inf_in_current,undefined,silent-stable,fail-silent,0.654288,False,False,False,
+scipy/ranksums,control_no_shift,stable,silent-stable,pass,0.051594,False,False,False,
+scipy/ranksums,control_large_shift,shifted,silent-drift,pass,0.000000,True,False,False,
+scipy/brunnermunzel,degenerate_reference,undefined,explicit-undefined,pass,nan,False,True,True,score is None/NaN
+scipy/brunnermunzel,degenerate_current,shifted,explicit-undefined,safe-undefined,nan,False,True,True,score is None/NaN
+scipy/brunnermunzel,both_constant_equal,stable,explicit-undefined,safe-undefined,nan,False,True,True,score is None/NaN
+scipy/brunnermunzel,both_constant_different,shifted,explicit-undefined,safe-undefined,nan,False,True,True,score is None/NaN
+scipy/brunnermunzel,disjoint_support,shifted,explicit-undefined,safe-undefined,nan,False,True,True,score is None/NaN
+scipy/brunnermunzel,empty_reference_bins,shifted,silent-stable,fail-miss,1.000000,False,False,False,
+scipy/brunnermunzel,tiny_current_n3,undefined,silent-stable,fail-silent,0.097186,False,False,False,
+scipy/brunnermunzel,tiny_both_n5,undefined,silent-stable,fail-silent,0.410545,False,False,False,
+scipy/brunnermunzel,empty_current,undefined,explicit-undefined,pass,nan,False,True,True,score is None/NaN
+scipy/brunnermunzel,all_nan_current,undefined,explicit-undefined,pass,nan,False,False,True,score is None/NaN
+scipy/brunnermunzel,partial_nan_current,undefined,explicit-undefined,pass,nan,False,False,True,score is None/NaN
+scipy/brunnermunzel,inf_in_current,undefined,silent-stable,fail-silent,0.654905,False,False,False,
+scipy/brunnermunzel,control_no_shift,stable,silent-stable,pass,0.051279,False,False,False,
+scipy/brunnermunzel,control_large_shift,shifted,silent-drift,pass,0.000000,True,False,False,
+scipy/anderson_ksamp,degenerate_reference,undefined,silent-drift,fail-noisy,0.001000,True,True,False,2 warning(s)
+scipy/anderson_ksamp,degenerate_current,shifted,silent-drift,pass,0.001000,True,True,False,2 warning(s)
+scipy/anderson_ksamp,both_constant_equal,stable,raised,error,,,False,True,ValueError: anderson_ksamp needs more than one distinct observation
+scipy/anderson_ksamp,both_constant_different,shifted,silent-drift,pass,0.001000,True,True,False,2 warning(s)
+scipy/anderson_ksamp,disjoint_support,shifted,silent-drift,pass,0.001000,True,True,False,2 warning(s)
+scipy/anderson_ksamp,empty_reference_bins,shifted,silent-drift,pass,0.001000,True,True,False,2 warning(s)
+scipy/anderson_ksamp,tiny_current_n3,undefined,silent-stable,fail-silent,0.176717,False,True,False,1 warning(s)
+scipy/anderson_ksamp,tiny_both_n5,undefined,silent-stable,fail-silent,0.250000,False,True,False,2 warning(s)
+scipy/anderson_ksamp,empty_current,undefined,raised,pass,,,False,True,ValueError: anderson_ksamp encountered sample without observations
+scipy/anderson_ksamp,all_nan_current,undefined,silent-drift,fail-noisy,0.001000,True,True,False,2 warning(s)
+scipy/anderson_ksamp,partial_nan_current,undefined,silent-drift,fail-noisy,0.001000,True,True,False,2 warning(s)
+scipy/anderson_ksamp,inf_in_current,undefined,silent-stable,fail-silent,0.250000,False,True,False,2 warning(s)
+scipy/anderson_ksamp,control_no_shift,stable,silent-stable,pass,0.070476,False,True,False,1 warning(s)
+scipy/anderson_ksamp,control_large_shift,shifted,silent-drift,pass,0.001000,True,True,False,2 warning(s)
+scipy/mood,degenerate_reference,undefined,silent-stable,fail-silent,1.000000,False,False,False,
+scipy/mood,degenerate_current,shifted,silent-stable,fail-miss,1.000000,False,False,False,
+scipy/mood,both_constant_equal,stable,explicit-undefined,safe-undefined,nan,False,True,True,score is None/NaN
+scipy/mood,both_constant_different,shifted,explicit-undefined,safe-undefined,nan,False,True,True,score is None/NaN
+scipy/mood,disjoint_support,shifted,silent-stable,fail-miss,1.000000,False,False,False,
+scipy/mood,empty_reference_bins,shifted,silent-drift,pass,0.000000,True,False,False,
+scipy/mood,tiny_current_n3,undefined,silent-stable,fail-silent,0.838041,False,False,False,
+scipy/mood,tiny_both_n5,undefined,silent-stable,fail-silent,0.247676,False,False,False,
+scipy/mood,empty_current,undefined,explicit-undefined,pass,nan,False,False,True,score is None/NaN
+scipy/mood,all_nan_current,undefined,explicit-undefined,pass,nan,False,False,True,score is None/NaN
+scipy/mood,partial_nan_current,undefined,explicit-undefined,pass,nan,False,False,True,score is None/NaN
+scipy/mood,inf_in_current,undefined,silent-stable,fail-silent,0.125046,False,False,False,
+scipy/mood,control_no_shift,stable,silent-stable,pass,0.619582,False,False,False,
+scipy/mood,control_large_shift,shifted,silent-stable,fail-miss,0.861196,False,False,False,
+scipy/ansari,degenerate_reference,undefined,silent-stable,fail-silent,1.000000,False,False,False,
+scipy/ansari,degenerate_current,shifted,silent-stable,fail-miss,1.000000,False,False,False,
+scipy/ansari,both_constant_equal,stable,silent-drift,fail-alarm,0.000000,True,False,False,
+scipy/ansari,both_constant_different,shifted,explicit-undefined,safe-undefined,nan,False,True,True,score is None/NaN
+scipy/ansari,disjoint_support,shifted,silent-stable,fail-miss,1.000000,False,False,False,
+scipy/ansari,empty_reference_bins,shifted,silent-drift,pass,0.000000,True,False,False,
+scipy/ansari,tiny_current_n3,undefined,silent-stable,fail-silent,0.787978,False,False,False,
+scipy/ansari,tiny_both_n5,undefined,silent-stable,fail-silent,0.539683,False,False,False,
+scipy/ansari,empty_current,undefined,explicit-undefined,pass,nan,False,True,True,score is None/NaN
+scipy/ansari,all_nan_current,undefined,explicit-undefined,pass,nan,False,False,True,score is None/NaN
+scipy/ansari,partial_nan_current,undefined,explicit-undefined,pass,nan,False,False,True,score is None/NaN
+scipy/ansari,inf_in_current,undefined,silent-stable,fail-silent,0.139026,False,False,False,
+scipy/ansari,control_no_shift,stable,silent-stable,pass,0.536024,False,False,False,
+scipy/ansari,control_large_shift,shifted,silent-stable,fail-miss,0.715572,False,False,False,
+scipy/wasserstein_distance,degenerate_reference,undefined,explicit-undefined,pass,,,False,True,status=undefined-scale
+scipy/wasserstein_distance,degenerate_current,shifted,silent-drift,pass,6.969959,True,False,False,
+scipy/wasserstein_distance,both_constant_equal,stable,explicit-undefined,safe-undefined,,,False,True,status=undefined-scale
+scipy/wasserstein_distance,both_constant_different,shifted,explicit-undefined,safe-undefined,,,False,True,status=undefined-scale
+scipy/wasserstein_distance,disjoint_support,shifted,silent-drift,pass,69.741233,True,False,False,
+scipy/wasserstein_distance,empty_reference_bins,shifted,silent-drift,pass,0.916706,True,False,False,
+scipy/wasserstein_distance,tiny_current_n3,undefined,silent-drift,fail-noisy,0.896677,True,False,False,
+scipy/wasserstein_distance,tiny_both_n5,undefined,silent-drift,fail-noisy,0.655042,True,False,False,
+scipy/wasserstein_distance,empty_current,undefined,raised,pass,,,False,True,ValueError: Distribution can't be empty.
+scipy/wasserstein_distance,all_nan_current,undefined,explicit-undefined,pass,nan,False,False,True,score is None/NaN
+scipy/wasserstein_distance,partial_nan_current,undefined,explicit-undefined,pass,nan,False,False,True,score is None/NaN
+scipy/wasserstein_distance,inf_in_current,undefined,explicit-undefined,pass,nan,False,True,True,score is None/NaN
+scipy/wasserstein_distance,control_no_shift,stable,silent-stable,pass,0.132906,False,False,False,
+scipy/wasserstein_distance,control_large_shift,shifted,silent-drift,pass,2.826472,True,False,False,
+scipy/energy_distance,degenerate_reference,undefined,explicit-undefined,pass,,,False,True,status=undefined-scale
+scipy/energy_distance,degenerate_current,shifted,silent-drift,pass,0.945161,True,False,False,
+scipy/energy_distance,both_constant_equal,stable,explicit-undefined,safe-undefined,,,False,True,status=undefined-scale
+scipy/energy_distance,both_constant_different,shifted,explicit-undefined,safe-undefined,,,False,True,status=undefined-scale
+scipy/energy_distance,disjoint_support,shifted,silent-drift,pass,3.093536,True,False,False,
+scipy/energy_distance,empty_reference_bins,shifted,silent-drift,pass,0.286793,True,False,False,
+scipy/energy_distance,tiny_current_n3,undefined,silent-stable,fail-silent,0.202484,False,False,False,
+scipy/energy_distance,tiny_both_n5,undefined,silent-stable,fail-silent,0.122761,False,False,False,
+scipy/energy_distance,empty_current,undefined,raised,pass,,,False,True,ValueError: Distribution can't be empty.
+scipy/energy_distance,all_nan_current,undefined,explicit-undefined,pass,nan,False,False,True,score is None/NaN
+scipy/energy_distance,partial_nan_current,undefined,explicit-undefined,pass,nan,False,False,True,score is None/NaN
+scipy/energy_distance,inf_in_current,undefined,explicit-undefined,pass,nan,False,True,True,score is None/NaN
+scipy/energy_distance,control_no_shift,stable,silent-stable,pass,0.026924,False,False,False,
+scipy/energy_distance,control_large_shift,shifted,silent-drift,pass,0.489472,True,False,False,
+evidently/hellinger,degenerate_reference,undefined,silent-drift,fail-noisy,1.000000,True,False,False,
+evidently/hellinger,degenerate_current,shifted,silent-drift,pass,1.000000,True,False,False,
+evidently/hellinger,both_constant_equal,stable,silent-stable,pass,0.000000,False,False,False,
+evidently/hellinger,both_constant_different,shifted,silent-drift,pass,1.000000,True,False,False,
+evidently/hellinger,disjoint_support,shifted,silent-drift,pass,1.000000,True,False,False,
+evidently/hellinger,empty_reference_bins,shifted,silent-drift,pass,1.000000,True,False,False,
+evidently/hellinger,tiny_current_n3,undefined,silent-drift,fail-noisy,0.569790,True,False,False,
+evidently/hellinger,tiny_both_n5,undefined,silent-drift,fail-noisy,0.673491,True,False,False,
+evidently/hellinger,empty_current,undefined,explicit-undefined,pass,nan,False,True,True,score is None/NaN
+evidently/hellinger,all_nan_current,undefined,explicit-undefined,pass,nan,False,True,True,score is None/NaN
+evidently/hellinger,partial_nan_current,undefined,silent-stable,fail-silent,0.091945,False,False,False,
+evidently/hellinger,inf_in_current,undefined,raised,pass,,,False,True,"ValueError: autodetected range of [42.110837279252856, inf] is not finite"
+evidently/hellinger,control_no_shift,stable,silent-stable,pass,0.082134,False,False,False,
+evidently/hellinger,control_large_shift,shifted,silent-drift,pass,0.787840,True,False,False,
+evidently/jensenshannon,degenerate_reference,undefined,silent-drift,fail-noisy,0.832555,True,False,False,
+evidently/jensenshannon,degenerate_current,shifted,silent-drift,pass,0.832555,True,False,False,
+evidently/jensenshannon,both_constant_equal,stable,silent-stable,pass,0.000000,False,False,False,
+evidently/jensenshannon,both_constant_different,shifted,silent-drift,pass,0.832555,True,False,False,
+evidently/jensenshannon,disjoint_support,shifted,silent-drift,pass,0.832555,True,False,False,
+evidently/jensenshannon,empty_reference_bins,shifted,silent-drift,pass,0.832555,True,False,False,
+evidently/jensenshannon,tiny_current_n3,undefined,silent-drift,fail-noisy,0.493277,True,False,False,
+evidently/jensenshannon,tiny_both_n5,undefined,silent-drift,fail-noisy,0.832555,True,False,False,
+evidently/jensenshannon,empty_current,undefined,explicit-undefined,pass,nan,False,True,True,score is None/NaN
+evidently/jensenshannon,all_nan_current,undefined,raised,pass,,,False,True,"ValueError: autodetected range of [nan, nan] is not finite"
+evidently/jensenshannon,partial_nan_current,undefined,raised,pass,,,False,True,"ValueError: autodetected range of [nan, nan] is not finite"
+evidently/jensenshannon,inf_in_current,undefined,raised,pass,,,False,True,"ValueError: autodetected range of [42.110837279252856, inf] is not finite"
+evidently/jensenshannon,control_no_shift,stable,silent-stable,pass,0.078244,False,False,False,
+evidently/jensenshannon,control_large_shift,shifted,silent-drift,pass,0.691365,True,False,False,
+evidently/kl_div,degenerate_reference,undefined,silent-drift,fail-noisy,8.580409,True,False,False,
+evidently/kl_div,degenerate_current,shifted,silent-drift,pass,7.633477,True,False,False,
+evidently/kl_div,both_constant_equal,stable,silent-stable,pass,0.000000,False,False,False,
+evidently/kl_div,both_constant_different,shifted,silent-drift,pass,9.208498,True,False,False,
+evidently/kl_div,disjoint_support,shifted,silent-drift,pass,9.200219,True,False,False,
+evidently/kl_div,empty_reference_bins,shifted,silent-drift,pass,7.899765,True,False,False,
+evidently/kl_div,tiny_current_n3,undefined,silent-drift,fail-noisy,3.424505,True,False,False,
+evidently/kl_div,tiny_both_n5,undefined,silent-drift,fail-noisy,7.593305,True,False,False,
+evidently/kl_div,empty_current,undefined,explicit-undefined,pass,nan,False,True,True,score is None/NaN
+evidently/kl_div,all_nan_current,undefined,raised,pass,,,False,True,"ValueError: autodetected range of [nan, nan] is not finite"
+evidently/kl_div,partial_nan_current,undefined,raised,pass,,,False,True,"ValueError: autodetected range of [nan, nan] is not finite"
+evidently/kl_div,inf_in_current,undefined,raised,pass,,,False,True,"ValueError: autodetected range of [42.110837279252856, inf] is not finite"
+evidently/kl_div,control_no_shift,stable,silent-stable,pass,0.022448,False,False,False,
+evidently/kl_div,control_large_shift,shifted,silent-drift,pass,3.222915,True,False,False,
+evidently/ks,degenerate_reference,undefined,silent-drift,fail-noisy,0.000000,True,False,False,
+evidently/ks,degenerate_current,shifted,silent-drift,pass,0.000000,True,False,False,
+evidently/ks,both_constant_equal,stable,silent-stable,pass,1.000000,False,False,False,
+evidently/ks,both_constant_different,shifted,silent-drift,pass,0.000000,True,False,False,
+evidently/ks,disjoint_support,shifted,silent-drift,pass,0.000000,True,False,False,
+evidently/ks,empty_reference_bins,shifted,silent-drift,pass,0.000000,True,False,False,
+evidently/ks,tiny_current_n3,undefined,silent-stable,fail-silent,0.153041,False,False,False,
+evidently/ks,tiny_both_n5,undefined,silent-stable,fail-silent,0.873016,False,False,False,
+evidently/ks,empty_current,undefined,explicit-undefined,pass,nan,False,True,True,score is None/NaN
+evidently/ks,all_nan_current,undefined,explicit-undefined,pass,nan,False,False,True,score is None/NaN
+evidently/ks,partial_nan_current,undefined,explicit-undefined,pass,nan,False,False,True,score is None/NaN
+evidently/ks,inf_in_current,undefined,silent-stable,fail-silent,0.508917,False,False,False,
+evidently/ks,control_no_shift,stable,silent-stable,pass,0.291925,False,False,False,
+evidently/ks,control_large_shift,shifted,silent-drift,pass,0.000000,True,False,False,
+evidently/mann_whitney_u,degenerate_reference,undefined,silent-drift,fail-noisy,0.000000,True,False,False,
+evidently/mann_whitney_u,degenerate_current,shifted,silent-stable,fail-miss,1.000000,False,False,False,
+evidently/mann_whitney_u,both_constant_equal,stable,silent-stable,pass,1.000000,False,False,False,
+evidently/mann_whitney_u,both_constant_different,shifted,silent-drift,pass,0.000000,True,False,False,
+evidently/mann_whitney_u,disjoint_support,shifted,silent-drift,pass,0.000000,True,False,False,
+evidently/mann_whitney_u,empty_reference_bins,shifted,silent-stable,fail-miss,0.500044,False,False,False,
+evidently/mann_whitney_u,tiny_current_n3,undefined,silent-stable,fail-silent,0.947532,False,False,False,
+evidently/mann_whitney_u,tiny_both_n5,undefined,silent-stable,fail-silent,0.845238,False,False,False,
+evidently/mann_whitney_u,empty_current,undefined,explicit-undefined,pass,nan,False,True,True,score is None/NaN
+evidently/mann_whitney_u,all_nan_current,undefined,explicit-undefined,pass,nan,False,False,True,score is None/NaN
+evidently/mann_whitney_u,partial_nan_current,undefined,explicit-undefined,pass,nan,False,False,True,score is None/NaN
+evidently/mann_whitney_u,inf_in_current,undefined,silent-stable,fail-silent,0.327184,False,False,False,
+evidently/mann_whitney_u,control_no_shift,stable,silent-stable,pass,0.974210,False,False,False,
+evidently/mann_whitney_u,control_large_shift,shifted,silent-drift,pass,0.000000,True,False,False,
+evidently/psi,degenerate_reference,undefined,silent-drift,fail-noisy,12.055365,True,False,False,
+evidently/psi,degenerate_current,shifted,silent-drift,pass,16.841701,True,False,False,
+evidently/psi,both_constant_equal,stable,silent-stable,pass,0.000000,False,False,False,
+evidently/psi,both_constant_different,shifted,silent-drift,pass,18.418839,True,False,False,
+evidently/psi,disjoint_support,shifted,silent-drift,pass,18.418839,True,False,False,
+evidently/psi,empty_reference_bins,shifted,silent-drift,pass,16.445147,True,False,False,
+evidently/psi,tiny_current_n3,undefined,silent-drift,fail-noisy,4.277594,True,False,False,
+evidently/psi,tiny_both_n5,undefined,silent-drift,fail-noisy,15.194204,True,False,False,
+evidently/psi,empty_current,undefined,explicit-undefined,pass,nan,False,True,True,score is None/NaN
+evidently/psi,all_nan_current,undefined,raised,pass,,,False,True,"ValueError: autodetected range of [nan, nan] is not finite"
+evidently/psi,partial_nan_current,undefined,raised,pass,,,False,True,"ValueError: autodetected range of [nan, nan] is not finite"
+evidently/psi,inf_in_current,undefined,raised,pass,,,False,True,"ValueError: autodetected range of [42.110837279252856, inf] is not finite"
+evidently/psi,control_no_shift,stable,silent-stable,pass,0.052437,False,False,False,
+evidently/psi,control_large_shift,shifted,silent-drift,pass,7.902344,True,False,False,
+evidently/wasserstein,degenerate_reference,undefined,silent-drift,fail-noisy,99940.282712,True,False,False,
+evidently/wasserstein,degenerate_current,shifted,silent-drift,pass,6.969959,True,False,False,
+evidently/wasserstein,both_constant_equal,stable,silent-stable,pass,0.000000,False,False,False,
+evidently/wasserstein,both_constant_different,shifted,silent-drift,pass,92000.000000,True,False,False,
+evidently/wasserstein,disjoint_support,shifted,silent-drift,pass,69.741233,True,False,False,
+evidently/wasserstein,empty_reference_bins,shifted,silent-drift,pass,0.916706,True,False,False,
+evidently/wasserstein,tiny_current_n3,undefined,silent-drift,fail-noisy,0.896677,True,False,False,
+evidently/wasserstein,tiny_both_n5,undefined,silent-drift,fail-noisy,0.655042,True,False,False,
+evidently/wasserstein,empty_current,undefined,raised,pass,,,False,True,ValueError: Distribution can't be empty.
+evidently/wasserstein,all_nan_current,undefined,explicit-undefined,pass,nan,False,False,True,score is None/NaN
+evidently/wasserstein,partial_nan_current,undefined,explicit-undefined,pass,nan,False,False,True,score is None/NaN
+evidently/wasserstein,inf_in_current,undefined,explicit-undefined,pass,nan,False,True,True,score is None/NaN
+evidently/wasserstein,control_no_shift,stable,silent-drift,fail-alarm,0.132906,True,False,False,
+evidently/wasserstein,control_large_shift,shifted,silent-drift,pass,2.826472,True,False,False,
+river/KSWIN,degenerate_reference,undefined,silent-drift,fail-noisy,1.000000,True,False,False,
+river/KSWIN,degenerate_current,shifted,silent-drift,pass,1.000000,True,False,False,
+river/KSWIN,both_constant_equal,stable,silent-stable,pass,0.000000,False,False,False,
+river/KSWIN,both_constant_different,shifted,silent-drift,pass,1.000000,True,False,False,
+river/KSWIN,disjoint_support,shifted,silent-drift,pass,1.000000,True,False,False,
+river/KSWIN,empty_reference_bins,shifted,silent-drift,pass,1.000000,True,False,False,
+river/KSWIN,tiny_current_n3,undefined,silent-stable,fail-silent,0.000000,False,False,False,
+river/KSWIN,tiny_both_n5,undefined,silent-stable,fail-silent,0.000000,False,False,False,
+river/KSWIN,empty_current,undefined,silent-stable,fail-silent,0.000000,False,False,False,
+river/KSWIN,all_nan_current,undefined,silent-stable,fail-silent,0.000000,False,False,False,
+river/KSWIN,partial_nan_current,undefined,silent-stable,fail-silent,0.000000,False,False,False,
+river/KSWIN,inf_in_current,undefined,silent-stable,fail-silent,0.000000,False,False,False,
+river/KSWIN,control_no_shift,stable,silent-stable,pass,0.000000,False,False,False,
+river/KSWIN,control_large_shift,shifted,silent-drift,pass,1.000000,True,False,False,
+river/ADWIN,degenerate_reference,undefined,silent-drift,fail-noisy,1.000000,True,False,False,
+river/ADWIN,degenerate_current,shifted,silent-drift,pass,1.000000,True,False,False,
+river/ADWIN,both_constant_equal,stable,silent-stable,pass,0.000000,False,False,False,
+river/ADWIN,both_constant_different,shifted,silent-drift,pass,1.000000,True,False,False,
+river/ADWIN,disjoint_support,shifted,silent-drift,pass,1.000000,True,False,False,
+river/ADWIN,empty_reference_bins,shifted,silent-drift,pass,1.000000,True,False,False,
+river/ADWIN,tiny_current_n3,undefined,silent-stable,fail-silent,0.000000,False,False,False,
+river/ADWIN,tiny_both_n5,undefined,silent-stable,fail-silent,0.000000,False,False,False,
+river/ADWIN,empty_current,undefined,silent-stable,fail-silent,0.000000,False,False,False,
+river/ADWIN,all_nan_current,undefined,silent-stable,fail-silent,0.000000,False,False,False,
+river/ADWIN,partial_nan_current,undefined,silent-stable,fail-silent,0.000000,False,False,False,
+river/ADWIN,inf_in_current,undefined,silent-stable,fail-silent,0.000000,False,False,False,
+river/ADWIN,control_no_shift,stable,silent-stable,pass,0.000000,False,False,False,
+river/ADWIN,control_large_shift,shifted,silent-drift,pass,1.000000,True,False,False,
+river/PageHinkley,degenerate_reference,undefined,silent-drift,fail-noisy,1.000000,True,False,False,
+river/PageHinkley,degenerate_current,shifted,silent-drift,pass,1.000000,True,False,False,
+river/PageHinkley,both_constant_equal,stable,silent-stable,pass,0.000000,False,False,False,
+river/PageHinkley,both_constant_different,shifted,silent-drift,pass,1.000000,True,False,False,
+river/PageHinkley,disjoint_support,shifted,silent-drift,pass,1.000000,True,False,False,
+river/PageHinkley,empty_reference_bins,shifted,silent-drift,pass,1.000000,True,False,False,
+river/PageHinkley,tiny_current_n3,undefined,silent-stable,fail-silent,0.000000,False,False,False,
+river/PageHinkley,tiny_both_n5,undefined,silent-stable,fail-silent,0.000000,False,False,False,
+river/PageHinkley,empty_current,undefined,silent-stable,fail-silent,0.000000,False,False,False,
+river/PageHinkley,all_nan_current,undefined,silent-stable,fail-silent,0.000000,False,False,False,
+river/PageHinkley,partial_nan_current,undefined,silent-drift,fail-noisy,1.000000,True,False,False,
+river/PageHinkley,inf_in_current,undefined,silent-drift,fail-noisy,1.000000,True,False,False,
+river/PageHinkley,control_no_shift,stable,silent-drift,fail-alarm,1.000000,True,False,False,
+river/PageHinkley,control_large_shift,shifted,silent-drift,pass,1.000000,True,False,False,
+alibi-detect/KSDrift,degenerate_reference,undefined,silent-drift,fail-noisy,0.000000,True,False,False,
+alibi-detect/KSDrift,degenerate_current,shifted,silent-drift,pass,0.000000,True,False,False,
+alibi-detect/KSDrift,both_constant_equal,stable,silent-stable,pass,1.000000,False,False,False,
+alibi-detect/KSDrift,both_constant_different,shifted,silent-drift,pass,0.000000,True,False,False,
+alibi-detect/KSDrift,disjoint_support,shifted,silent-drift,pass,0.000000,True,False,False,
+alibi-detect/KSDrift,empty_reference_bins,shifted,silent-drift,pass,0.000000,True,True,False,1 warning(s)
+alibi-detect/KSDrift,tiny_current_n3,undefined,silent-stable,fail-silent,0.149736,False,False,False,
+alibi-detect/KSDrift,tiny_both_n5,undefined,silent-stable,fail-silent,0.820000,False,False,False,
+alibi-detect/KSDrift,empty_current,undefined,raised,pass,,,False,True,"ValueError: cannot reshape array of size 0 into shape (0,newaxis)"
+alibi-detect/KSDrift,all_nan_current,undefined,explicit-undefined,pass,nan,False,False,True,score is None/NaN
+alibi-detect/KSDrift,partial_nan_current,undefined,explicit-undefined,pass,nan,False,False,True,score is None/NaN
+alibi-detect/KSDrift,inf_in_current,undefined,silent-stable,fail-silent,0.492263,False,False,False,
+alibi-detect/KSDrift,control_no_shift,stable,silent-stable,pass,0.280026,False,False,False,
+alibi-detect/KSDrift,control_large_shift,shifted,silent-drift,pass,0.000000,True,True,False,1 warning(s)
+nannyml/jensen_shannon,degenerate_reference,undefined,silent-drift,fail-noisy,1.000000,True,True,False,6 warning(s)
+nannyml/jensen_shannon,degenerate_current,shifted,silent-drift,pass,1.000000,True,True,False,6 warning(s)
+nannyml/jensen_shannon,both_constant_equal,stable,silent-stable,pass,0.000000,False,True,False,6 warning(s)
+nannyml/jensen_shannon,both_constant_different,shifted,silent-drift,pass,1.000000,True,True,False,6 warning(s)
+nannyml/jensen_shannon,disjoint_support,shifted,silent-drift,pass,1.000000,True,True,False,6 warning(s)
+nannyml/jensen_shannon,empty_reference_bins,shifted,silent-stable,fail-miss,1.000000,False,True,False,6 warning(s)
+nannyml/jensen_shannon,tiny_current_n3,undefined,raised,pass,,,True,True,ChunkerException: could not split data into chunks: given chunk_size 0 is less then or equal to zero.The chunk size should always be large
+nannyml/jensen_shannon,tiny_both_n5,undefined,silent-stable,fail-silent,0.853456,False,True,False,6 warning(s)
+nannyml/jensen_shannon,empty_current,undefined,raised,pass,,,True,True,InvalidArgumentsException: data contains no rows. Please provide a valid data set.
+nannyml/jensen_shannon,all_nan_current,undefined,explicit-undefined,pass,nan,False,True,True,score is None/NaN
+nannyml/jensen_shannon,partial_nan_current,undefined,silent-stable,fail-silent,0.187660,False,True,False,6 warning(s)
+nannyml/jensen_shannon,inf_in_current,undefined,silent-drift,fail-noisy,0.169482,True,True,False,6 warning(s)
+nannyml/jensen_shannon,control_no_shift,stable,silent-drift,fail-alarm,0.137181,True,True,False,6 warning(s)
+nannyml/jensen_shannon,control_large_shift,shifted,silent-drift,pass,0.849997,True,True,False,6 warning(s)
+nannyml/kolmogorov_smirnov,degenerate_reference,undefined,silent-drift,fail-noisy,1.000000,True,True,False,6 warning(s)
+nannyml/kolmogorov_smirnov,degenerate_current,shifted,silent-drift,pass,1.000000,True,True,False,6 warning(s)
+nannyml/kolmogorov_smirnov,both_constant_equal,stable,silent-stable,pass,0.000000,False,True,False,6 warning(s)
+nannyml/kolmogorov_smirnov,both_constant_different,shifted,silent-drift,pass,1.000000,True,True,False,6 warning(s)
+nannyml/kolmogorov_smirnov,disjoint_support,shifted,silent-drift,pass,1.000000,True,True,False,6 warning(s)
+nannyml/kolmogorov_smirnov,empty_reference_bins,shifted,silent-stable,fail-miss,0.500000,False,True,False,6 warning(s)
+nannyml/kolmogorov_smirnov,tiny_current_n3,undefined,raised,pass,,,True,True,ChunkerException: could not split data into chunks: given chunk_size 0 is less then or equal to zero.The chunk size should always be large
+nannyml/kolmogorov_smirnov,tiny_both_n5,undefined,silent-stable,fail-silent,0.720000,False,True,False,6 warning(s)
+nannyml/kolmogorov_smirnov,empty_current,undefined,raised,pass,,,True,True,InvalidArgumentsException: data contains no rows. Please provide a valid data set.
+nannyml/kolmogorov_smirnov,all_nan_current,undefined,explicit-undefined,pass,nan,False,True,True,score is None/NaN
+nannyml/kolmogorov_smirnov,partial_nan_current,undefined,silent-stable,fail-silent,0.092000,False,True,False,6 warning(s)
+nannyml/kolmogorov_smirnov,inf_in_current,undefined,silent-stable,fail-silent,0.092800,False,True,False,6 warning(s)
+nannyml/kolmogorov_smirnov,control_no_shift,stable,silent-drift,fail-alarm,0.099600,True,True,False,6 warning(s)
+nannyml/kolmogorov_smirnov,control_large_shift,shifted,silent-drift,pass,0.839600,True,True,False,6 warning(s)
+nannyml/wasserstein,degenerate_reference,undefined,silent-drift,fail-noisy,99.940283,True,True,False,6 warning(s)
+nannyml/wasserstein,degenerate_current,shifted,silent-drift,pass,99.940283,True,True,False,6 warning(s)
+nannyml/wasserstein,both_constant_equal,stable,silent-stable,pass,0.000000,False,True,False,6 warning(s)
+nannyml/wasserstein,both_constant_different,shifted,silent-drift,pass,92.000000,True,True,False,6 warning(s)
+nannyml/wasserstein,disjoint_support,shifted,silent-drift,pass,1000.000000,True,True,False,6 warning(s)
+nannyml/wasserstein,empty_reference_bins,shifted,silent-stable,fail-miss,9.255750,False,True,False,6 warning(s)
+nannyml/wasserstein,tiny_current_n3,undefined,raised,pass,,,True,True,ChunkerException: could not split data into chunks: given chunk_size 0 is less then or equal to zero.The chunk size should always be large
+nannyml/wasserstein,tiny_both_n5,undefined,silent-stable,fail-silent,27.544714,False,True,False,6 warning(s)
+nannyml/wasserstein,empty_current,undefined,raised,pass,,,True,True,InvalidArgumentsException: data contains no rows. Please provide a valid data set.
+nannyml/wasserstein,all_nan_current,undefined,explicit-undefined,pass,nan,False,True,True,score is None/NaN
+nannyml/wasserstein,partial_nan_current,undefined,silent-stable,fail-silent,1.757805,False,True,False,6 warning(s)
+nannyml/wasserstein,inf_in_current,undefined,silent-stable,fail-silent,1.895787,False,True,False,7 warning(s)
+nannyml/wasserstein,control_no_shift,stable,silent-drift,fail-alarm,2.196596,True,True,False,6 warning(s)
+nannyml/wasserstein,control_large_shift,shifted,silent-drift,pass,40.527985,True,True,False,6 warning(s)
+nannyml/hellinger,degenerate_reference,undefined,silent-drift,fail-noisy,1.000000,True,True,False,6 warning(s)
+nannyml/hellinger,degenerate_current,shifted,silent-drift,pass,1.000000,True,True,False,6 warning(s)
+nannyml/hellinger,both_constant_equal,stable,silent-stable,pass,0.000000,False,True,False,6 warning(s)
+nannyml/hellinger,both_constant_different,shifted,silent-drift,pass,1.000000,True,True,False,6 warning(s)
+nannyml/hellinger,disjoint_support,shifted,silent-drift,pass,1.000000,True,True,False,6 warning(s)
+nannyml/hellinger,empty_reference_bins,shifted,silent-stable,fail-miss,1.000000,False,True,False,6 warning(s)
+nannyml/hellinger,tiny_current_n3,undefined,raised,pass,,,True,True,ChunkerException: could not split data into chunks: given chunk_size 0 is less then or equal to zero.The chunk size should always be large
+nannyml/hellinger,tiny_both_n5,undefined,silent-drift,fail-noisy,0.843653,True,True,False,6 warning(s)
+nannyml/hellinger,empty_current,undefined,raised,pass,,,True,True,InvalidArgumentsException: data contains no rows. Please provide a valid data set.
+nannyml/hellinger,all_nan_current,undefined,explicit-undefined,pass,nan,False,True,True,score is None/NaN
+nannyml/hellinger,partial_nan_current,undefined,silent-drift,fail-noisy,0.173031,True,True,False,6 warning(s)
+nannyml/hellinger,inf_in_current,undefined,silent-drift,fail-noisy,0.157944,True,True,False,6 warning(s)
+nannyml/hellinger,control_no_shift,stable,silent-drift,fail-alarm,0.120503,True,True,False,6 warning(s)
+nannyml/hellinger,control_large_shift,shifted,silent-drift,pass,0.827352,True,True,False,6 warning(s)

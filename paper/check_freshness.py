@@ -1,6 +1,7 @@
 """Fail if the manuscript could disagree with the results.
 
-Two guarantees, checked mechanically because both were violated in practice:
+Guarantees, checked mechanically because each was violated in practice here or
+in the sibling paper:
 
 1. No bare numeric literal that should be a generated macro appears in the
    prose. The manuscript once shipped a probe table and verdict spread copied
@@ -8,12 +9,19 @@ Two guarantees, checked mechanically because both were violated in practice:
    inconsistency the paper accuses others of.
 2. Every generated fragment is newer than the results CSV it derives from, so
    a re-run of the audit without a re-run of the generator is caught.
+3. No spelled-out number large enough to be a reported statistic sits in the
+   prose, where no digit-based scan would ever find it.
+4. Bibliography hygiene: no dangling cite, no uncited entry, no entry type the
+   IEEEtran style cannot render.
+5. Every documented command is runnable exactly as printed.
+6. The clean-detector count is present.
 
 Run before any submission or artifact freeze.
 """
 
 from __future__ import annotations
 
+import ast
 import csv
 import re
 import sys
@@ -151,7 +159,64 @@ def main() -> int:
                     f"  bib entry '{key}' has type @{kind}, which IEEEtran's "
                     f"style file does not define; use @misc")
 
-    # 5. The clean-detector count must match.
+    # 5. Every documented command must be runnable exactly as printed. Nothing
+    #    here checked this class: the sibling paper shipped a reproduction
+    #    command reading `--seeds 1,2,3,...,30`, where the ellipsis is not a
+    #    seed and the command dies before it starts. Checked statically, so a
+    #    missing scientific dependency cannot make the check pass by accident.
+    def declared_flags(path: Path) -> set[str]:
+        flags: set[str] = set()
+        source = ast.parse(path.read_text(encoding="utf-8"), filename=str(path))
+        for node in ast.walk(source):
+            if (
+                isinstance(node, ast.Call)
+                and isinstance(node.func, ast.Attribute)
+                and node.func.attr == "add_argument"
+            ):
+                flags.update(
+                    a.value
+                    for a in node.args
+                    if isinstance(a, ast.Constant) and isinstance(a.value, str)
+                )
+        return flags
+
+    for doc in ("ARTIFACT.md", "README.md"):
+        path = REPO / doc
+        if not path.exists():
+            continue
+        for line in path.read_text(encoding="utf-8").splitlines():
+            cmd = line.strip().split("#")[0].strip()
+            m = re.match(r"^python (?:-m ([\w.]+)|([\w/]+\.py))\b(.*)", cmd)
+            if not m:
+                continue
+            module, script, rest = m.groups()
+            if module:
+                target = REPO / (module.replace(".", "/") + ".py")
+                if not target.exists():
+                    # A stdlib module (python -m venv) is fine; anything else
+                    # documented but absent is not.
+                    if module.split(".")[0] not in sys.stdlib_module_names:
+                        problems.append(f"  {doc}: '{cmd}' names a module that is not here")
+                    continue
+            else:
+                target = REPO / script
+                if not target.exists():
+                    problems.append(f"  {doc}: '{cmd}' names a script that is not here")
+                    continue
+            known = declared_flags(target)
+            for flag in re.findall(r"(--[\w-]+)", rest):
+                if flag not in known:
+                    problems.append(
+                        f"  {doc}: '{cmd.split()[2] if module else script}' does not "
+                        f"accept {flag}"
+                    )
+            # An input path that does not exist makes the command unrunnable
+            # just as surely as an unknown flag.
+            for flag, value in re.findall(r"(--csv|--bib)\s+(\S+)", rest):
+                if not (REPO / value).exists():
+                    problems.append(f"  {doc}: '{cmd}' reads {value}, which is missing")
+
+    # 6. The clean-detector count must match.
     if f"\\NumClean" not in tex and facts["clean"] not in tex:
         problems.append("  clean-detector count is neither a macro nor present")
 

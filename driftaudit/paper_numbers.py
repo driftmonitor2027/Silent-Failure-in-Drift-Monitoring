@@ -61,7 +61,9 @@ FAMILY_LABEL = {
     "published tutorial PSI": "Published tutorial PSI",
     "divergence / distance": "Divergence / distance",
     "field defect (n=1)": "Field defect ($n{=}1$)",
-    "reference impl. (control)": "Reference impl.\ (control)",
+    # Raw string: '\ ' is a LaTeX inter-word space, but an invalid Python
+    # escape -- a warning today and a SyntaxError in a later interpreter.
+    "reference impl. (control)": r"Reference impl.\ (control)",
 }
 
 

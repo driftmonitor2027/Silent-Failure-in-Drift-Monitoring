@@ -28,6 +28,7 @@ import argparse
 import ast
 import csv
 import inspect
+import re
 import textwrap
 from dataclasses import dataclass, field
 from pathlib import Path
@@ -155,11 +156,30 @@ class _GuardScan(ast.NodeVisitor):
         self.generic_visit(node)
 
 
+#: Everything up to and including the environment's package root.
+_PKG_ROOT = re.compile(r"^.*?[\\/](?:site-packages|dist-packages)[\\/]", re.I)
+
+
+def _relative_source(path: str) -> str:
+    """Where a detector's source lives, without saying whose machine it is.
+
+    ``inspect.getsourcefile`` returns an absolute path, which on Windows
+    embeds the operator's account name. This file ships to reviewers in a
+    double-anonymous artifact, and the column is provenance rather than a
+    result -- nothing reads it -- so the part before ``site-packages`` is
+    dropped and the informative half kept.
+    """
+    trimmed = _PKG_ROOT.sub("", path)
+    if trimmed == path:
+        return path
+    return "site-packages/" + trimmed.replace("\\", "/")
+
+
 def analyze_callable(detector_name: str, fn) -> Finding:
     """Resolve a live callable to source and classify its guards."""
     try:
         src = textwrap.dedent(inspect.getsource(fn))
-        path = inspect.getsourcefile(fn) or "?"
+        path = _relative_source(inspect.getsourcefile(fn) or "?")
         line = inspect.getsourcelines(fn)[1]
         module = getattr(fn, "__module__", "?") or "?"
         qualname = getattr(fn, "__qualname__", getattr(fn, "__name__", "?"))

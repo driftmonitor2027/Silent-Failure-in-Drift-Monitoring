@@ -10,8 +10,6 @@ treats every non-raising return as a measurement. An implementation that answers
 an undefined test with a bare low float silently disables that gate and leaves
 the dashboard green. This repo measures which implementations do that.
 
-Research plan (this paper and two follow-ups): [PLAN.md](PLAN.md).
-
 ## Run
 
 ```bash

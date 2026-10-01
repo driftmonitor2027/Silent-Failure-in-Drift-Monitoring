@@ -159,6 +159,9 @@ class _GuardScan(ast.NodeVisitor):
 #: Everything up to and including the environment's package root.
 _PKG_ROOT = re.compile(r"^.*?[\\/](?:site-packages|dist-packages)[\\/]", re.I)
 
+#: The checkout this package runs from; its own adapters are reported relative to it.
+_PROJECT_ROOT = Path(__file__).resolve().parents[1]
+
 
 def _relative_source(path: str) -> str:
     """Where a detector's source lives, without saying whose machine it is.
@@ -167,12 +170,18 @@ def _relative_source(path: str) -> str:
     embeds the operator's account name. This file ships to reviewers in a
     double-anonymous artifact, and the column is provenance rather than a
     result -- nothing reads it -- so the part before ``site-packages`` is
-    dropped and the informative half kept.
+    dropped and the informative half kept. The audit's own implementations
+    live in this checkout rather than in an environment, so they are made
+    relative to it: an absolute path there names the directory it was cloned
+    into, which is just as much the operator's business.
     """
     trimmed = _PKG_ROOT.sub("", path)
-    if trimmed == path:
+    if trimmed != path:
+        return "site-packages/" + trimmed.replace("\\", "/")
+    try:
+        return Path(path).resolve().relative_to(_PROJECT_ROOT).as_posix()
+    except ValueError:
         return path
-    return "site-packages/" + trimmed.replace("\\", "/")
 
 
 def analyze_callable(detector_name: str, fn) -> Finding:

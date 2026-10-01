@@ -311,7 +311,7 @@ Two rows in Table~\ref{tab:family} are not audited subjects and their rates are 
 \caption{Dangerous cells per detector, out of \NumProbes{} probes each. Detectors with no dangerous cell are listed first.}
 \label{tab:detectors}
 \footnotesize
-\input{generated/tab_detectors}
+\resizebox{\columnwidth}{!}{\input{generated/tab_detectors}}
 \end{table}
 
 Table~\ref{tab:detectors} gives the per-detector breakdown, and the ordering is itself the finding: the clean end is populated entirely by divergences, the dangerous end almost entirely by p-value tests and streaming detectors. The two worst SciPy-as-gate entries (\texttt{mood}, \texttt{ansari}) test for differences in \emph{scale} rather than location, so the location shift in our control is invisible to them by design---a reminder that ``dangerous'' here is always relative to the drift-gate use, never a claim about a test's own validity (Section~\ref{sec:controls}).
